@@ -14,9 +14,7 @@ resource "aws_iam_role" "demo_deploy" {
         Condition = {
           StringEquals = {
             "token.actions.githubusercontent.com:aud" = "sts.amazonaws.com"
-          }
-          StringLike = {
-            "token.actions.githubusercontent.com:sub" = "repo:Sir-seju/*"
+            "token.actions.githubusercontent.com:sub" = "repo:Sir-seju/wardhand-accept-controls:ref:refs/heads/main"
           }
         }
       }
